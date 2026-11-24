@@ -71,7 +71,7 @@ RevEng/
 
 ---
 
-## 🚀 Phase 1: PE Loader
+## PE Loader
 
 ### What Was Built
 - **`src/reveng/loader/models.py`**:
@@ -96,7 +96,7 @@ When Windows launches an `.exe`, the OS loader does not simply dump the file int
 
 ---
 
-### 🧠 Reverse-Engineering Concepts & Glossary
+### Reverse-Engineering Concepts & Glossary
 
 | Term | Concept & Significance |
 | :--- | :--- |
@@ -111,7 +111,7 @@ When Windows launches an `.exe`, the OS loader does not simply dump the file int
 
 ---
 
-### 🛠️ How to Run & Inspect
+### How to Run & Inspect
 
 1. **Run Unit Tests**:
    ```powershell
@@ -139,7 +139,7 @@ When Windows launches an `.exe`, the OS loader does not simply dump the file int
 
 ---
 
-### ⚠️ Known Limitations (Phase 1)
+### Known Limitations (Phase 1)
 - **Relocation Table (`.reloc`)**: Currently, base relocations (ASLR fixups) are parsed via `pefile` default mechanisms, but manual rebasing to non-preferred image bases is not yet needed since subsequent stages work on normalized RVAs.
 - **Delay-Loaded Imports**: Only standard directory imports (`IMAGE_DIRECTORY_ENTRY_IMPORT`) are parsed in this phase; delay-load imports (`IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT`) will be integrated if encountered in real-world samples.
 
